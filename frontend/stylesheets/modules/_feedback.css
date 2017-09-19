@@ -1,0 +1,326 @@
+.feedback{
+	height: var(--blockHeight);
+	position: relative;
+	z-index: 2;
+	&__title{
+		position: absolute 20px * * 50%;
+		transform: translateX(-50%);
+		color: var(--colorWrap);
+		z-index: 3;
+		width: 100%;
+		text-align: center;
+	}
+	&__carousel{
+		height: 100%;
+	}
+	&__carousel_slide{
+		.left-side{
+			width: 100%;
+			height: calc(var(--blockHeight)/3);
+         	min-height: 200px;
+			background: var(--colorDetail);
+			position: relative;
+			&__rating{
+				padding: 60px 0 0 0;
+				text-align: center;
+				.icon-icon-ios7-star{
+					font-size: 1.375em;
+					color: var(--colorWrap);
+					margin-right: 5px;
+				}
+				span:last-of-type{
+					color: var(--colorText);
+					opacity: .8;
+					margin-right: 0;
+				}
+				.rating-text{
+					font-size: 1em;
+					color: var(--colorText);
+					opacity: .5;
+					line-height: 18px;
+					padding: 5px 0;
+				}
+			}
+			&__photo{
+				position: absolute 100% * * 50%;
+				transform: translate(-50%, -50%);
+				z-index: 3;
+				size: 175px;
+				border-radius: 50%;
+				background: var(--colorWrap);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				img{
+					display: block;
+					size: 160px;
+					border-radius: 50%;
+				}
+			}
+			&__name{
+				position: absolute 320px * * 50%;
+				transform: translateX(-50%);
+				font: 1.375em "GothamProMedium";
+				display: flex;
+				z-index: 3;
+				span:first-child{
+					margin-right: 8px;
+				}
+			}
+		}
+		.right-side{
+			background: var(--colorSection);
+			height: calc(2*var(--blockHeight)/3);
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			&__text{
+				position: relative;
+				font-size: .875em;
+				line-height: 22px;
+				padding: 170px 16px 0 32px; 
+				white-space: pre-line;
+				text-align: justify;
+				max-height: 280px;
+				overflow: hidden;
+				&:before{
+					content: '';
+					background: url(../images/quotes.png) no-repeat;
+					background-size:cover; 
+					size: 22px 13px;
+					position: absolute 165px * * 0;
+					z-index: 4;
+				}
+			}
+		}
+	}
+	.slick-list{
+		height: 100%;
+	}
+	.slick-dots{
+		position: absolute * * 2% 50%;
+		transform: translateX(-50%);
+	}
+}
+
+@media (--spHeight-viewport){
+  .feedback{
+    height: auto;
+  }
+}
+
+@media (--mediumOne-viewport) {
+	.feedback{
+		&__title{
+			position: absolute 59px * * *;
+		}
+		&__carousel_slide{
+			.left-side{
+	         	min-height: 400px;
+				&__rating{
+					padding: 160px 0 0 0;
+					.icon-icon-ios7-star{
+						font-size: 1.75em;
+						margin-right: 10px;
+					}
+					.rating-text{
+						font-size: 1.5em;
+						line-height: 28px;
+						padding: 25px 0;
+					}
+				}
+				&__photo{
+					size: 284px;
+					img{
+						size: 260px;
+					}
+				}
+				&__name{
+					position: absolute 590px * * *;
+					font: 1.75em "GothamProMedium";
+				}
+			}
+			.right-side{
+				&__text{
+					font-size: 1.5em;
+					line-height: 36px;
+					padding: 280px 20px 0 62px; 
+					max-height: 500px;
+					&:before{
+						size: 46px 28px;
+						position: absolute 280px * * *;
+					}
+				}
+			}
+		}
+		.slick-dots{
+			position: absolute * * 70px *;
+		
+		}
+	}
+}
+
+
+@media (--mediumTwo-viewport) {
+	.feedback{
+		&__title{
+			position: absolute 76px * * 64px;
+			transform: translateX(0px);
+			font-size: 1.75em;
+			line-height: 36px;
+			width: 180px;
+			text-align: justify; 
+		}
+		.slick-initialized .slick-slide{
+			display: flex;
+		}
+		.slick-list, .slick-track{
+			height: 100%;
+		}
+		&__carousel{
+			height: 100%;
+			&_slide{
+				display: flex;
+			}
+		}
+		.left-side{
+			height: 100%;
+			min-width: 352px;
+			width: 352px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.content{
+				padding-right: 0px !important;
+				margin: 0px !important;
+			}
+			&__rating{
+				padding: 0;
+				text-align: left;
+				.icon-icon-ios7-star{
+					font-size: 1.1875em;
+					margin-right: 8px;
+				}
+				.rating-text{
+					font-size: .75em;
+					line-height: 16px;
+					padding: 15px 0 0 0;
+				}
+			}
+			&__photo{
+				size: 236px;
+				position: absolute 50% * * 100%;
+				transform: translate(-50%, -50%);
+				img{
+					size: 216px;
+				}
+			}
+			&__name{
+				position: relative 0 * * *;
+				font-size: 1em;
+				margin: 60px 0 0 0;
+				color: var(--colorWrap);
+				flex-direction: column;
+			}
+		}
+		.right-side{
+			height: 100%;
+			flex-grow: 1;
+			align-items: center;
+			justify-content: stretch;
+			.content {
+				padding-left: 0px !important;
+				margin: 0px !important;
+				width: 100% !important;
+			}
+			&__text{
+				line-height: 24px;
+				width: 372px;
+				padding: 0 0 0 192px; 
+				box-sizing: content-box;
+				max-height: auto;
+				&:before{
+					size: 30px 18px;
+					position: absolute 0 * * 147px;
+				}
+			}
+		}
+		.slick-arrow{
+			size: 64px;
+			top: auto;
+			bottom: 0;
+			left: 352px;
+			&:before{
+				content:"";
+				size: 15px 27px;
+				position: absolute 50% * * 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+		.slick-next{
+			background: var(--colorWrap);
+			opacity: 0.6;
+			&:before{
+				background: url("../images/arrow-next.png") no-repeat 50% 50%;
+				background-size: cover;
+			}
+		}
+		.slick-prev{
+			background: var(--colorText);
+			transform: translateX(-100%);
+			z-index: 9;
+			opacity: 0.1;
+			&:before{
+				background: url("../images/arrow-prev.png") no-repeat 50% 50%;
+				background-size: cover;
+				opacity: 1;
+			}
+		}
+		.slick-dots{
+			bottom: 64px;
+			left: 652px;
+		}
+	}
+}
+
+@media (--extraLarge-viewport) {
+	.feedback{
+		&__title{
+			position: absolute 97px * * 84px;
+			font-size: 2.25em;
+			line-height: 40px;
+			width: 220px;
+		}
+		.left-side{
+			min-width: 425px;
+			width: 425px;
+			&__name{
+				font-size: 1.125em;
+				margin: 75px 0 0 0;
+			}
+		}
+		.right-side{
+			&__text{
+				line-height: 30px;
+				font-size: 1.125em;
+				width: 478px;
+				padding: 0 0 0 255px;
+				&:before{
+					position: absolute 0 * * 210px;
+				}
+			}
+		}
+		.slick-arrow{
+			size: 85px;
+			left: 425px;
+			&:before{
+				size: 20px 36px;
+			}
+		}
+		.slick-dots{
+			bottom: 85px;
+			left: 857px;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+  "name": "pr",
+  "description": "price page",
+  "main": "index.js",
+  "authors": [
+    "andrey <andreyvolochnyuk@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/AndreyVolochnyuk/test-repo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "requirejs-plugins": "^1.0.3",
+    "jquery": "^3.1.1",
+    "domready": "^1.0.8",
+    "requirejs": "^2.3.2",
+    "slick-carousel": "^1.6.0",
+    "readmore-js": "^2.2.0",
+    "magnific-popup": "^1.1.0"
+  }
+}

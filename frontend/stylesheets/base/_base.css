@@ -1,0 +1,15 @@
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+body{
+	min-width: var(--minWidth);
+	font-size: 16px;
+	font-family: GothamProRegular;
+	color: var(--colorText) var(--colorBody);
+} 
+
+a{
+	text-decoration: none;
+}
+

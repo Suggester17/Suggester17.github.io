@@ -1,0 +1,227 @@
+.form{
+	position: relative;
+	&__title{
+		font-size: 1.125em;
+		padding: 20px 0;
+	}
+	&__list{
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 50px;
+		&_field{
+			display: flex;
+			flex-direction: column;
+			padding-bottom: 20px;
+			position: relative;
+			label[for='name'], label[for='email']{
+				position: absolute 50% * * 0;
+				transform: translateY(-10px);
+				font-size: .75em;
+				transition: transform 0.6s;
+			}
+			input[type='text'], input[type='email']{
+				font-size: .875em;
+				line-height: 18px;
+				padding: 10px 0;
+				border: none;
+				border-bottom: 2px solid #d6e3f1;
+				margin-top: 20px;
+				transition: all 0.6s ease-in-out;
+				&:valid {
+			      background: var(--colorWrap); 
+			    }
+			    &:valid+label{
+			    	transform: translateY(-40px);
+			    }
+				&:focus{
+					border-bottom-color: var(--#3283c1);
+					outline: none;
+				}
+				&:focus +label{
+					transform: translateY(-40px);
+				}
+			}
+			textarea {
+			    display: block;
+			    resize: vertical;
+			    color: var(--colorSomeText) var(--colorWrap);
+			    min-height: 150px; 
+			    font-size: .75em;
+			    line-height: 18px;
+			    border: 2px solid #d6e3f1;
+			    border-radius: 6px;
+			    padding: 10px 10px 0 10px;
+			    &:focus{
+			    	outline: none;
+			    }
+			}
+		}
+	}
+	&__buttons{
+		width: 100%;
+		position: absolute * 0 0 *;
+		display: flex;
+		justify-content: space-between;
+		input{
+			width: 45%;
+			font-size: .875em;
+			padding: 15px 0;
+			border: 2px solid transparent;
+			color: var(--colorDetail) var(--colorPsevdo);
+			transition: all 0.4s ease-in-out;
+			&:focus{
+			    	outline: none;
+			    	color: var(--colorWrap) #008ac5;
+			    	text-transform: uppercase;
+			}
+			&:hover{
+				border-color: #008ac5;
+			}
+		}
+	}
+}
+
+@media (--mediumOne-viewport) {
+		.form{
+		position: relative;
+		&__title{
+			font-size: 2.5em;
+			padding: 62px 0 32px 0;
+		}
+		&__list{
+			padding-bottom: 100px;
+			&_field{
+				padding-bottom: 40px;
+				label[for='name'], label[for='email']{
+					transform: translateY(-15px);
+					font-size: 1.5em;
+				}
+				input[type='text'], input[type='email']{
+					font-size: 1.75em;
+					line-height: 28px;
+					padding: 20px 0;
+					margin-top: 40px;
+				    &:valid+label{
+				    	transform: translateY(-75px);
+				    }
+					&:focus +label{
+						transform: translateY(-75px);
+					}
+				}
+				textarea {
+				    min-height: 320px; 
+				    font-size: 1.5em;
+				    line-height: 36px;
+				    padding: 25px 25px 0 25px;
+				}
+			}
+		}
+		&__buttons{
+			input{
+				font-size: 1.75em;
+				padding: 25px 0;
+			}
+			
+		}
+	}
+}
+
+
+@media (--large-viewport) {
+	.form{
+		&__title{
+			font-size: 1.125em;
+			line-height: 29px;
+			padding: 34px 0 30px 0;
+		}
+		&__list{
+			padding-bottom: 92px;
+			&_field{
+				padding-bottom: 30px;
+				label[for='name'], label[for='email']{
+					transform: translateY(-12px);
+					font-size: .75em;
+					line-height: 24px;
+				}
+				input[type='text'], input[type='email']{
+					font-size: .875em;
+					line-height: 24px;
+					padding: 12px 0;
+					margin-top: 30px;
+					width: 50%;
+				    &:valid+label{
+				    	transform: translateY(-52px);
+				    }
+					&:focus +label{
+						transform: translateY(-52px);
+					}
+				}
+				textarea {
+				    min-height: 130px; 
+				    font-size: .875em;
+				    line-height: 24px;
+				    padding: 20px 20px 0 20px;
+				}
+			}
+		}
+		&__buttons{
+			width: 50%;
+			position: absolute * * 40px 0;
+			justify-content: space-between;
+			input{
+				width: 49%;
+				font-size: .875em;
+				line-height: 30px;
+				padding: 9px 0;
+				border-radius: 6px;
+			}
+		}
+	}
+}
+
+@media (--extraLarge-viewport) {
+	.form{
+		&__title{
+			font-size: 1.5em;
+			line-height: 29px;
+			padding: 45px 0 30px 0;
+		}
+		&__list{
+			padding-bottom: 102px;
+			&_field{
+				padding-bottom: 38px;
+				label[for='name'], label[for='email']{
+					transform: translateY(-12px);
+					font-size: .875em;
+				}
+				input[type='text'], input[type='email']{
+					font-size: 1.125em;
+					line-height: 30px;
+					padding: 10px 0;
+					margin-top: 38px;
+				    &:valid+label{
+				    	transform: translateY(-55px);
+				    }
+					&:focus +label{
+						transform: translateY(-55px);
+					}
+				}
+				textarea {
+				    min-height: 150px; 
+				    font-size: 1.125em;
+				    line-height: 30px;
+				}
+			}
+		}
+		&__buttons{
+			width: 50%;
+			position: absolute * * 50px 0;
+			justify-content: space-between;
+			input{
+				width: 49%;
+				font-size: 1em;
+				line-height: 30px;
+			}
+		}
+	}
+}

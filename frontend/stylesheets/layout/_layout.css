@@ -1,0 +1,41 @@
+#wrapper{
+	position: relative;
+	background: var(--colorWrap);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+	.content{
+		width: auto;
+		margin: 0 auto;
+	}
+}
+
+@media (--smart-viewport) {
+  	.content{
+  		padding: 0 calc(var(--padContentLar)/4);
+  	}
+}
+
+@media (--mediumOne-viewport) {
+  	.content{
+  		padding: 0 var(--padContentLar);
+  	}
+}
+
+@media (--large-viewport) {
+  #wrapper{
+  	width: var(--mediumWidth);
+  	.content{
+  		padding: 0 var(--padContentLar);
+  	}
+  }
+}
+@media (--extraLarge-viewport) {
+  #wrapper{
+  	width: var(--maxWidth);
+  	.content{
+  		padding: 0 var(--padContentExt);
+  	}
+  }
+}

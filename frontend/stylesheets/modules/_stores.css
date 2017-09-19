@@ -1,0 +1,228 @@
+.stores{
+	text-align: center;
+	&__title{
+		padding: 20px 0 30px 0;
+	}
+	&__big-logos{
+		display: flex;
+		flex-wrap: wrap;
+		align-content: stretch;
+		margin-bottom: 30px;
+		&_link{
+			position: relative;
+			flex-basis: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100px;
+		}
+		&_img{
+			width: 80%;
+			&:focus, &:hover{
+				filter: invert(80%);
+
+			}
+		}
+	}
+	.amazon-link{
+		img{
+			transform: translateY(5px);
+		}
+		&:after{
+			@mixin pseudo 2px, 100%, 0px, 0px, *, *;
+			transform: translateX(50%);
+		}
+		&:before{
+			@mixin pseudo 100%, 2px, 100%, *, *, 0px;
+			transform: translateY(-50%);
+		}
+	}
+	.toys-link{
+		position: relative;
+		&:after{
+			@mixin pseudo 2px, 100%, 0px, *, *, 0px;
+			transform: translateX(-50%);
+		}
+		&:before{
+			@mixin pseudo 100%, 2px, 0px, *, *, 0px;
+			transform: translateY(-50%);
+		}
+	}
+}
+/*-----------------small logos ------------------*/
+.small-logos-row{
+	display: flex;
+	min-height: 70px;
+	justify-content: space-between;
+	align-items: stretch;
+	position: relative;
+	.small-logos_link{
+		flex-basis: 33.33%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		padding: 0 5px;
+		img{
+			width: auto;
+			transition: transform .3s;
+			perspective: 600px;
+			&:focus, &:hover{
+				transform: scale(1.2) rotateY(360deg);
+			}
+		}
+		.sears, .ace, .kohls, .macys {
+			width: 80%;
+		}
+		.barnes, .walmart{
+			width: 95%
+		}
+		&:nth-child(2){
+			&:after{
+				@mixin pseudo 2px, 100%, 0px, 0px, *, *;
+				transform: translateX(50%);
+			}
+			&:before{
+				@mixin pseudo 2px, 100%,  0px, *, *, 0px;
+				transform: translateX(-50%);
+			}
+		}
+	}
+	&:after{
+		@mixin pseudo 100%, 2px, 100%, 0px, *, *;
+		transform: translateY(-50%);
+	}
+	&:last-child{
+		&:after{
+			display: none;
+		}
+	}		
+}
+.hidden{
+	margin-top: 20px;
+}
+
+/*-----------------plagin style-------------------*/
+	
+ article[data-readmore] {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+
+article + [data-readmore-toggle]{
+	font-size: 1.25em;
+	color: var(--colorDetail);
+	padding: 20px;
+	display: inline-flex;
+	transition: transform .3s ease-out;
+	&:hover{
+		transform: scale(1.1);
+	}
+}
+/*------------------------------madia-----------------------*/
+@media (--mediumOne-viewport) {
+	.stores{
+		&__title{
+			padding: 59px 0 72px 0;
+		}
+		&__big-logos{
+			margin-bottom: 47px;
+			&_link{
+				min-height: 160px;
+			}
+			&_img{
+				width: auto;
+			}
+		}
+	}
+	.small-logos-row{
+		min-height: 96px;
+		.small-logos_link{
+			padding: 0;
+			.small-logos_img{
+				width: auto;
+			}
+		}		
+	}
+	article + [data-readmore-toggle]{
+		font-size: 1.75em;
+		margin: 58px 0;
+	}
+}
+
+
+@media (--large-viewport) {
+	.stores{
+		&__title{
+			padding: 78px 0 63px 0;
+		}
+		&__big-logos{
+			flex-wrap: no-wrap;
+			margin-bottom: 42px;
+			&_link{
+				flex-basis: 25%;
+				min-height: 200px;
+				&:after{
+					@mixin pseudo 2px, 100%, 0px, 0px, *, *;
+					transform: translateX(50%);
+				}
+			}
+		}
+		.amazon-link{
+			img{
+				transform: translateY(10px);
+			}
+			&:before{
+				display: none;
+			}
+		}
+		.toys-link{
+			&:after{
+				display: none;
+			}
+			&:before{
+				display: none;
+			}
+		}		
+	}
+	.small-logos-row{
+		min-height: 100px;	
+	}
+	article + [data-readmore-toggle]{
+		font-size: 1em;
+		line-height: 24px;
+		margin: 65px 0;
+	}
+}
+
+@media (--extraLarge-viewport) {
+	.stores{
+		&__title{
+			padding: 96px 0 84px 0;
+		}
+		&__big-logos{
+			margin-bottom: 48px;
+			&_link{
+				min-height: 240px;
+				&:after{
+					@mixin pseudo 1px, 100%, 0px, 0px, *, *;
+					transform: translateX(50%);
+				}
+			}
+		}
+		.amazon-link{
+			&:after{
+					@mixin pseudo 1px, 100%, 0px, 0px, *, *;
+					transform: translateX(50%);
+			}
+		}		
+	}
+	.small-logos-row{
+		min-height: 120px;	
+	}
+	article + [data-readmore-toggle]{
+		font-size: 1.125em;
+		margin: 85px 0;
+	}
+}

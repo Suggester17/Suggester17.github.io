@@ -1,0 +1,46 @@
+:root{
+		  
+	/* color variables*/
+
+	--colorText: #000;
+	--colorSomeText: #333333;
+	--colorBody: #f3f5f8;
+	--colorWrap: #fff;
+	--colorSection: #e2ecf6;
+	--colorDetail: #3283c1;
+	--cororBlock: #2e7ebb;
+	--colorHover: #0060a1;
+	--colorPsevdo: #d6e3f1;
+
+	/* width variables*/
+	--minWidth: 320px;
+	--maxWidth: 1360px;
+	--mediumWidth: 1024px;
+	--padContentLar: 64px;
+	--padContentExt: 84px;
+	
+	/* height variables*/
+	--blockHeight: 100vh;
+}
+
+@define-mixin pseudo $width, $height, $top, $right, $bottom, $left {
+   content:"";
+   background: var(--colorPsevdo);
+   width: $width;
+   height: $height;
+   position: absolute $top $right $bottom $left;
+}
+
+
+@custom-media --smart-viewport (width >= 320px);
+
+@custom-media --mediumOne-viewport (width >= 640px);
+
+@custom-media --mediumTwo-viewport (width >= 950px);
+
+@custom-media --large-viewport (width >= 1024px);
+
+@custom-media --extraLarge-viewport (width >= 1360px);
+
+@custom-media --spHeight-viewport (height <= 540px);
+
